@@ -1,0 +1,11 @@
+// sql
+
+CREATE TABLE shopmember(
+userid varchar2(20) primary key,
+pwd varchar2(20),
+name varchar2(20),
+phone varchar2(20),
+email varchar2(20),
+admin number(1)
+)
+

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%@ include file="include/header.jsp"%>
+<%@ include file="header.jsp"%>
 <div class="container about">
 	<div class="con1 con">
 		<div class="con_title">Lorem</div>
@@ -35,4 +35,4 @@
 		</div>
 	</div>
 </div>
-<%@ include file="include/footer.jsp"%>
+<%@ include file="footer.jsp"%>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%@ include file="include/header.jsp"%>
+<%@ include file="header.jsp"%>
 <div class="container my_info">
 	<div class="con1">
 		<p class="title"><b>KOLON ONE ID</b> 회원정보 변경안내</p>
@@ -138,4 +138,4 @@
 		</div>
 	</div>
 </div>
-<%@ include file="include/footer.jsp"%>
+<%@ include file="footer.jsp"%>
