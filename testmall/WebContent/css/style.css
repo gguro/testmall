@@ -1,0 +1,750 @@
+@import "reset.css";
+
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+}
+
+img {
+	width: 100%;
+}
+
+body {
+	font-family: "Nanum Gothic", sans-serif;
+	font-size: 14px;
+}
+
+.wrapper {
+	position: relative;
+}
+
+.header {
+	padding: 50px 0 70px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+.header .logo {
+	display: inline-block;
+	font-size: 32px;
+}
+
+.header .menu {
+	padding: 70px 0 0;
+	position: absolute;
+	top: 0;
+	left: 20px;
+}
+
+.header .menu ul {
+	display: inline-block;
+	overflow: hidden;
+}
+
+.header .menu ul li {
+	float: left;
+	position: relative;
+}
+
+.header .menu ul li::after {
+	content: "";
+	width: 0;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #000;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	opacity: 0.2;
+}
+
+.header .menu ul li.on::after {
+	width: 100%;
+	opacity: 1;
+}
+
+.header .menu ul li:hover::after {
+	width: 100%;
+}
+
+.header .menu ul li a {
+	padding: 10px 20px;
+}
+
+.header .gnb {
+	padding: 70px 0 0;
+	position: absolute;
+	top: 0;
+	right: 20px;
+}
+
+.header .gnb ul {
+	overflow: hidden;
+	border: 1px solid #fff;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.header .gnb ul:hover {
+	border: 1px solid #ccc;
+}
+
+.header .gnb ul li {
+	float: left;
+}
+
+.header .gnb ul li a {
+	padding: 10px 20px;
+	color: #777;
+}
+
+.header .gnb ul li a:hover {
+	font-weight: bold;
+}
+
+.container {
+	overflow: hidden;
+}
+
+.footer {
+	background: #fff;
+	border-top: 1px solid #eee;
+}
+
+.footer .link_area {
+	text-align: center;
+	border-bottom: 1px solid #eee;
+}
+
+.footer .link_area ul {
+	padding: 30px 0;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.footer .link_area ul li {
+	float: left;
+	border-right: 1px solid #ccc;
+}
+
+.footer .link_area ul li:last-child {
+	border: none;
+}
+
+.footer .link_area ul li a {
+	padding: 0 10px;
+	color: #666;
+}
+
+.footer .link_area ul li a:hover {
+	text-decoration: underline;
+}
+
+.footer .site_info {
+	overflow: hidden;
+	border-top: 1px solid #fff;
+}
+
+.footer .site_info .logo {
+	width: 20%;
+	padding: 30px 0;
+	float: left;
+	text-align: center;
+}
+.footer .site_info .logo a{
+	display: inline-block;
+}
+.footer .site_info .info_area {
+	width: 80%;
+	padding: 30px 200px 30px 50px;
+	line-height: 20px;
+	float: left;
+	font-size: 12px;
+	color: #666;
+	border-left: 1px solid #fff;
+}
+
+.popup_bg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: -100px;
+	left: -100px;
+	z-index: 99;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+}
+
+.popup_bg.on {
+	display: block;
+}
+
+.popup {
+	width: 500px;
+	height: 400px;
+	position: absolute;
+	top: 200px;
+	left: 50%;
+	z-index: 100;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	background: #fff;
+	display: none;
+}
+
+.popup.sign_popup {
+	height: 500px;
+}
+
+.popup.on {
+	display: block;
+}
+
+.popup h2 {
+	margin-bottom: 30px;
+	padding: 30px 0;
+	text-align: center;
+	font-size: 32px;
+}
+
+.popup form {
+	
+}
+
+.popup form .row {
+	width: 300px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+
+.popup form .row input {
+	width: 100%;
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+.popup form .row input[type=submit] {
+	cursor: pointer;
+	background: #fff;
+	color: #333;
+	border: 1px solid #000;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.popup form .row input[type=submit]:hover {
+	background: #333;
+	color: #fff;
+}
+
+.popup .find_row {
+	width: 300px;
+	margin: 0 auto;
+	padding: 15px 0;
+	text-align: center;
+}
+
+.popup .find_row a {
+	padding: 0 8px;
+	display: inline-block;
+	color: #999;
+	border-right: 1px solid #ccc;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.popup .find_row a:hover {
+	color: #333;
+}
+
+.popup .find_row a:last-child {
+	border: none;
+	color: #333;
+}
+
+.popup .close {
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+
+
+/*------------------main page-----------------*/
+.container.main .con1{
+	position: relative;
+	overflow: hidden;
+	height: 488px;
+}
+.container.main .con1 .swiper-container1 {
+	width: 100%;
+	height: 100%;
+}
+.container.main .con1 .swiper-container1 .swiper_slide1{
+	background: url("../images/main/main_con1_1.jpg") center 0 no-repeat;
+}
+.container.main .con1 .swiper-container1 .swiper_slide2{
+	background: url("../images/main/main_con1_2.jpg") center 0 no-repeat;
+}
+.container.main .con1 .swiper-container1 .swiper_slide3{
+	background: url("../images/main/main_con1_3.jpg") center 0 no-repeat;
+}
+.container.main .con2{
+	width: 1000px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+.container.main .con2 ul{
+	overflow: hidden;
+}
+.container.main .con2 ul li{
+	float: left;
+}
+.container.main .con2 ul li:last-child{
+	float: right;
+}
+.container.main .con3{
+	width: 1000px;
+	margin: 0 auto;
+	height: 550px;
+}
+.container.main .con4{
+	width: 1000px;
+	height: 370px;
+	margin: 100px auto;
+	overflow: hidden;
+	position: relative;
+}
+.container.main .con4 .swiper-container2 {
+	width: 80%;
+	height: 100%;
+	overflow: hidden;
+	float: right;
+}
+.container.main .con4 .btn_wrap{
+	width: 20%;
+	height: 370px;
+	padding-top: 120px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.container.main .con4 .btn_wrap p{
+	color: #999;
+	text-align: center;
+}
+.container.main .con4 .btn_wrap .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+	background: url("../images/btn_pre.png") center center no-repeat;
+	top: 70%;
+	left: 50px;
+}
+.container.main .con4 .btn_wrap .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+	background: url("../images/btn_next.png") center center no-repeat;
+	top: 70%;
+	right: 50px;
+}
+.container.main .con5{
+	width: 1000px;
+	margin: 100px auto;
+}
+.container.main .con5 ul{
+	overflow: hidden;
+}
+.container.main .con5 ul li{
+	width: 470px;
+	margin-bottom: 50px;
+	float: left;
+}
+.container.main .con5 ul li:nth-child(odd){
+	margin-right: 60px;
+}
+.container.main .con5 ul li .title{
+	padding: 20px 0;
+}
+.container.main .con5 ul li .des{
+	color: #666;
+	line-height: 24px;
+}
+/*------------------/main page-----------------*/
+
+/*------------------about page-----------------*/
+.container.about {
+	margin: 0 -100px 0;
+}
+
+.container.about  .con {
+	padding: 100px 0;
+	overflow: hidden;
+}
+
+.container.about  .con .con_title {
+	width: 60%;
+	float: left;
+	font-size: 100px;
+	text-align: center;
+}
+
+.container.about  .con .con_sub {
+	width: 40%;
+	padding-right: 200px;
+	float: left;
+	line-height: 20px;
+}
+
+.container.about  .con .con_sub b {
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+}
+
+.container.about  .con .con_sub p {
+	padding-right: 50px;
+}
+
+.container.about  .con1 {
+	background: #eee;
+}
+
+.container.about  .con2 .con_sub {
+	padding-right: 0;
+	padding-left: 200px;
+}
+
+.container.about  .con3 {
+	background: #000;
+	color: #fff;
+}
+
+/*-----------------/about page-----------------*/
+
+/*------------------news page-----------------*/
+.container.news {
+	padding: 0 150px;
+}
+
+.container.news .con {
+	padding-bottom: 50px;
+}
+
+.container.news .con table {
+	width: 100%;
+}
+
+.container.news .con table thead {
+	border-top: 2px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.container.news .con table thead tr th {
+	padding: 20px 0;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.container.news .con table tbody tr td {
+	text-align: center;
+	padding: 20px 0;
+	color: #666;
+	border-bottom: 1px solid #ddd;
+}
+
+.container.news .con table tbody tr td a {
+	color: #666;
+}
+
+.container.news .con table tbody tr td a:hover {
+	text-decoration: underline;
+	color: #000;
+}
+
+.container.news .con table tbody tr td.title {
+	padding: 20px 50px;
+	text-align: left;
+}
+
+/*-----------------/news page-----------------*/
+
+/*------------------event page-----------------*/
+.container.event {
+	padding: 0 150px;
+}
+
+.container.event  .con ul {
+	overflow: hidden;
+}
+
+.container.event  .con ul li {
+	float: left;
+	text-align: center;
+}
+
+.container.event  .con ul li:nth-child(1) {
+	width: 70%;
+}
+
+.container.event  .con ul li:nth-child(2) {
+	width: 30%;
+}
+
+.container.event  .con ul li:nth-child(2) .item {
+	margin-bottom: 20px;
+}
+
+.container.event  .con ul li:nth-child(2) .item a {
+	padding: 20px 0;
+}
+
+.container.event  .con ul li .item a {
+	display: inline-block;
+}
+
+.container.event  .con ul li .item.on a {
+	position: relative;
+}
+
+.container.event  .con ul li .item.on a::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.6;
+}
+
+.container.event  .con ul li .item a span {
+	padding: 5px 20px;
+	display: block;
+	text-align: left;
+	line-height: 20px;
+}
+
+.container.event  .con ul li .item a span.title {
+	padding-top: 20px;
+	font-size: 20px;
+	color: #666;
+}
+
+.container.event  .con ul li .item a span.des, .container.event  .con ul li .item a span.date
+	{
+	color: #999;
+}
+
+/*-----------------/event page-----------------*/
+
+/*------------------my_info page-----------------*/
+
+.container.my_info{
+	width: 1000px;
+	margin: 0 auto;
+}
+.container.my_info .con1 {
+	padding: 30px 0;
+	border-bottom: 1px solid #ccc;
+}
+.container.my_info .con1 .title{
+	font-size: 20px;
+}
+.container.my_info .con1 .title b{
+	color: #cd3d30;
+}
+.container.my_info .con1 .des{
+	margin-top: 15px;
+	color: #666;
+}
+.container.my_info .con2 .con_header{
+	padding: 30px 0;
+	overflow: hidden;
+	border-bottom: 2px solid #666;
+}
+.container.my_info .con2 .con_header h2{
+	float: left;
+	font-size: 20px;
+}
+.container.my_info .con2 .con_header .btn_out{
+	padding: 10px 20px;
+	float: right;
+	border: 1px solid #333;
+}
+.container.my_info .con2 .con_form .row{
+	padding: 10px 0;
+	overflow: hidden;
+	display: block;
+}
+.container.my_info .con2 .con_form .row.pt20{
+	padding-top: 30px;
+}
+.container.my_info .con2 .con_form .row.pb20{
+	padding-bottom: 30px;
+}
+.container.my_info .con2 .con_form .row .title{
+	width: 150px;
+	float: left;
+	color: #555;
+	line-height: 24px;
+}
+.container.my_info .con2 .con_form .row .title b{
+	color: red;
+}
+.container.my_info .con2 .con_form .row.fava label{
+	width: 144px;
+	margin-bottom: 5px;
+}
+.container.my_info .con2 .con_form .row.hm .title{
+	height: 50px;
+}
+.container.my_info .con2 .con_form .row .form_tel{
+	width: 100px;
+}
+.container.my_info .con2 .con_form .row .form_add{
+	width: 500px;
+}
+.container.my_info .con2 .con_form .row .form_text{
+	float: left;
+}
+.container.my_info .con2 .con_form .row > p{
+	padding-bottom: 15px;
+}
+.container.my_info .con2 .con_form .row > input{
+	height: 30px;
+	padding: 0 10px;
+	line-height: 30px;
+	float: left;
+}
+.container.my_info .con2 .con_form .row .labelWrap{
+	padding-left: 150px;
+}
+.container.my_info .con2 .con_form .row .labelWrap label{
+	width: 150px;
+	display: inline-block;
+}
+.container.my_info .con2 .con_form .row .labelWrap.other_w label{
+	width: auto;
+}
+.container.my_info .con2 .con_form .row > span{
+	height: 30px;
+	line-height: 30px;
+	padding: 0 15px;
+	float: left;
+}
+.container.my_info .con2 .con_form .row > .btn_sub{
+	float: left;
+}
+.container.my_info .con2 .con_form .row.bdb{
+	border-bottom: 1px solid #ccc;
+}
+.container.my_info .con2 .con_form .btn_submitWrap{
+	padding: 40px 0 100px;
+}
+.container.my_info .con2 .con_form .btn_submitWrap ul{
+	overflow: hidden;
+	text-align: center;
+}
+.container.my_info .con2 .con_form .btn_submitWrap ul li{
+	margin-right: 20px;
+	display: inline-block;
+}
+.container.my_info .con2 .con_form .btn_submitWrap ul li:last-child{
+	margin-right: 0;
+}
+.container.my_info .con2 .con_form .btn_submitWrap ul li input{
+	width: 150px;
+	height: 40px;
+	background: #333;
+	border: none;
+	line-height: 40px;
+	color: #fff;
+}
+.container.my_info .con2 .con_form .btn_submitWrap ul li a{
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #000;
+	text-align: center;
+}
+
+/*-----------------/my_info page-----------------*/
+
+/*------------------cart page-----------------*/
+.container.cart .con table thead tr th {
+	font-size: 16px;
+}
+
+.container.cart .con table tbody tr td {
+	height: 80px;
+	line-height: 80px;
+}
+
+.container.cart .con table tbody tr td.title .img_wrap {
+	margin-right: 20px;
+}
+
+.container.cart .con table tbody tr td.title .img_wrap img {
+	width: 62px;
+}
+
+/*-----------------/cart page-----------------*/
+
+/*------------------magazine page-----------------*/
+.container.magazine  .con {
+	margin-bottom: 50px;
+}
+
+.container.magazine  .con ul {
+	overflow: hidden;
+}
+
+.container.magazine  .con ul li {
+	width: 25%;
+	padding: 20px;
+	float: left;
+}
+
+.container.magazine  .con ul li img {
+	width: 100%;
+}
+
+.container.magazine  .con ul li .t1 {
+	padding: 10px 0;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.container.magazine  .con ul li .t2 {
+	padding: 5px 0;
+	color: #999;
+}
+
+.container.magazine  .con ul li .t3 {
+	padding: 5px 0;
+	color: #999;
+	line-height: 18px;
+}
+
+.container.magazine  .con ul li .t4 {
+	padding: 5px 0;
+	color: #999;
+}
+
+/*-----------------/magazine page-----------------*/
