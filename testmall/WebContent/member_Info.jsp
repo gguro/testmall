@@ -5,7 +5,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%@ include file="header.jsp"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<!-- 헤더 인클루드 -->
+<c:import url="header.jsp" charEncoding="UTF-8"></c:import>
+<div class="wrapper">
+
+<!-- top 메뉴바 -->
+<c:import url="topMenu.jsp" charEncoding="UTF-8"></c:import>
 <!-- 예시 테이블 생성 -->
 <!-- CREATE TABLE member_all_select (
     name        VARCHAR2(20),
@@ -57,7 +64,7 @@ INSERT INTO member_all_select VALUES (
 	String pass = "oracle";
 	
 	/* db 테이블명 입력 필요 */
-	String sql = "select * from member";%>  
+	String sql = "select * from shopmember";%>  
 	
 <div class="container my_info">
 	
@@ -121,4 +128,4 @@ INSERT INTO member_all_select VALUES (
 	</table>
 	</div>
 </div>
-<%@ include file="footer.jsp"%>
+<c:import url="footer.jsp" charEncoding="UTF-8"></c:import>

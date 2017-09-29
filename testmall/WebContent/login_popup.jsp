@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="login_popup popup">
 	<h2>LOGIN</h2>
-	<form class="" action="login_test.jsp" method="post">
+	<form class="" action="login.do" method="post">
 		<div class="row">
 			<input type="text" name="userid" value="" id="login_id" placeholder="아이디">
 		</div>

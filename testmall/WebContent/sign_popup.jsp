@@ -1,9 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<div class="sign_popup popup">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<script type="text/javascript" src="script/member.js"></script>
+
+<!-- 헤더 인클루드 -->
+<c:import url="header.jsp" charEncoding="UTF-8"></c:import>
+
+<div class="wrapper">
+
+<!-- top 메뉴바 -->
+<c:import url="topMenu.jsp" charEncoding="UTF-8"></c:import>
+
+<div class="sign_popup">
 	<h2>SIGN</h2>
-	<form action="add_member.jsp" method="post">
+	<form action="join.do" method="post">
 		<div class="row">
-			<input type="text" name="userid" value="" id="login_id" placeholder="아이디">
+			<input type="text" name="userid" size="20"  id="login_id" placeholder="아이디">* 
+			<input type="hidden" name="reid" size="20"> 
+			<input type="button" value="중복 체크" onclick="idCheck()">
 		</div>
 		<div class="row">
 			<input type="text" name="pwd" value="" id="login_pass" placeholder="비밀번호">
@@ -28,3 +42,4 @@
 	</form>
 	<div class="close">X</div>
 </div>
+<c:import url="footer.jsp" charEncoding="UTF-8"></c:import>

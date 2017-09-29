@@ -1,7 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<%@ include file="header.jsp"%>
+<!-- 헤더 인클루드 -->
+<c:import url="header.jsp" charEncoding="UTF-8"></c:import>
+<div class="wrapper">
+
+<!-- top 메뉴바 -->
+<c:import url="topMenu.jsp" charEncoding="UTF-8"></c:import>
+
 <div class="container news">
 	<div class="con">
 		<table>
@@ -101,4 +108,4 @@
 		</table>
 	</div>
 </div>
-<%@ include file="footer.jsp"%>
+<c:import url="footer.jsp" charEncoding="UTF-8"></c:import>

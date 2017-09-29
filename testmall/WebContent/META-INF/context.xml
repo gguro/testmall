@@ -11,9 +11,9 @@ DBCP 자원을 jdbc/myoracle 식별자로 등록 -->
 		url="jdbc:oracle:thin:@127.0.0.1:1521:XE" 
 		username="scott" 
 		password="tiger"
-		maxActive="10"  
+		maxActive="49"  
 		maxWait="-1" 
-		maxIdle="3"/>
+		maxIdle="20"/>
 		<!--  DataSource : 커넥션풀인터페이스 DataSourceFactory:  커넥션풀구현클래스  
               maxActive : 커넥션최대개수
               maxIdle : 커넥션최소개수
