@@ -21,7 +21,7 @@
 				<li><a href="logout.do">logout</a></li>
 			</c:if>
 			<c:if test="${loginUser.name == null}">
-				<li><a href="login.do">login</a></li>
+				<li><a href="login.do">LOGIN</a></li>
 			</c:if>
 			
 			<li><a href="cart.jsp">CART(0)</a></li>

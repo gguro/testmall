@@ -74,4 +74,5 @@
 		</div>
 	</div>
 </div>
+</div>
 <c:import url="footer.jsp" charEncoding="UTF-8"></c:import>

@@ -8,7 +8,10 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+
 import com.mall.dto.MemberVO;
+
+
 
 public class MemberDAO {
 	private MemberDAO() {
@@ -209,6 +212,47 @@ public class MemberDAO {
 			}
 		}
 		return result;
+	}
+	
+	// id 검색 (forgetid)
+	public String searchIdByInfo(String email) {
+		int result = -1;
+		String sql = "select userid from shopmember where email=?";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String userid = null;
+		
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				userid = rs.getString("userid");
+			} else {
+				result = -1;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (pstmt != null);
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception ee) {
+				ee.printStackTrace();
+			}
+		}
+		return userid;
 	}
 
 }

@@ -2,11 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<!-- Çì´õ ÀÎÅ¬·çµå -->
+<!-- ï¿½ï¿½ï¿½ ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ -->
 <c:import url="header.jsp" charEncoding="UTF-8"></c:import>
 <div class="wrapper">
 
-<!-- top ¸Þ´º¹Ù -->
+<!-- top ï¿½Þ´ï¿½ï¿½ï¿½ -->
 <c:import url="topMenu.jsp" charEncoding="UTF-8"></c:import>
 
 <div class="container news">
@@ -107,5 +107,6 @@
 			</tbody>
 		</table>
 	</div>
+</div>
 </div>
 <c:import url="footer.jsp" charEncoding="UTF-8"></c:import>
