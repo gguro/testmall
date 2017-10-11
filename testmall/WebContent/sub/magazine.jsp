@@ -3,11 +3,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!-- 헤더 인클루드 -->
-<c:import url="/header.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="/include/header.jsp" charEncoding="UTF-8"></c:import>
 <div class="wrapper">
 
 <!-- top 메뉴바 -->
-<c:import url="/topMenu.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="/include/topMenu.jsp" charEncoding="UTF-8"></c:import>
 
 <div class="container magazine">
 	<div class="con">
@@ -46,4 +46,4 @@
 	</div>
 </div>
 </div>
-<c:import url="/footer.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="/include/footer.jsp" charEncoding="UTF-8"></c:import>

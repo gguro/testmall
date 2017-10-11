@@ -5,7 +5,12 @@
 <!-- 헤더 인클루드 -->
 <c:import url="header.jsp" charEncoding="UTF-8"></c:import>
 
-<div class="forgetid">
+<div class="wrapper">
+
+<!-- top 메뉴바 -->
+<c:import url="topMenu.jsp" charEncoding="UTF-8"></c:import>
+
+<div class="forgetid_popup">
 	<h2>아이디 찾기</h2>
 	<form action="forgetid.do" method="get" name="frm"> email 
 		<input type="text" name="email" value="${email}"> 
@@ -32,6 +37,6 @@
 	
 	<div class="close">X</div>
 </div>
-
+</div>
 </body>
 </html>

@@ -33,7 +33,7 @@ public class ForgetIdServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		String url = "forgetid.jsp";
+		String url = "member/forgetid.jsp";
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
@@ -58,7 +58,7 @@ public class ForgetIdServlet extends HttpServlet {
 			request.setAttribute("result", "1");
 		}
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp"); 
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/member/login.jsp"); 
 		dispatcher.forward(request, response);
 	}
 

@@ -5,9 +5,14 @@
 
 
 <!-- 헤더 인클루드 -->
-<c:import url="/header.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="header.jsp" charEncoding="UTF-8"></c:import>
+<div class="wrapper">
+
 <!-- top 메뉴바 -->
-<c:import url="/topMenu.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="topMenu.jsp" charEncoding="UTF-8"></c:import>
+
+
+<div class="idcheck_popup">
 	<h2>아이디 중복확인</h2>
 	<form action="idCheck.do" method="get" name="frm"> 아이디 
 		<input type="text" name="userid" value="${userid}"> 
@@ -29,4 +34,4 @@
 	</form>
 </div>
 
-<c:import url="/footer.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="footer.jsp" charEncoding="UTF-8"></c:import>
