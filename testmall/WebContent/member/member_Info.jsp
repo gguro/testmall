@@ -128,4 +128,5 @@ INSERT INTO member_all_select VALUES (
 	</table>
 	</div>
 </div>
+</div>
 <c:import url="footer.jsp" charEncoding="UTF-8"></c:import>

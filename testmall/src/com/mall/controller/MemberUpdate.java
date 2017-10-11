@@ -35,7 +35,9 @@ public class MemberUpdate extends HttpServlet {
 		String userid = request.getParameter("userid");
 		MemberDAO mDao = MemberDAO.getInstance();
 		MemberVO mVo = mDao.getMember(userid);
+		
 		request.setAttribute("mVo",  mVo);
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("memberUpdate.jsp");
 		dispatcher.forward(request, response);
 	}

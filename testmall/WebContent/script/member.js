@@ -30,7 +30,6 @@ function idok(userid) {
 }
 
 function joinCheck() {
-	
 	if (document.frm.userid.value.length == 0) {
 		alert("아이디를 써주세요");
 		frm.userid.focus();

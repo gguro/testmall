@@ -206,6 +206,7 @@ body {
 }
 
 .popup.sign_popup {
+	height: 500px;
 }
 
 .popup.on {

@@ -17,6 +17,7 @@ import com.mall.dto.MemberVO;
  * Servlet implementation class LoginServlet
  */
 @WebServlet("/login.do")
+//@WebServlet(urlPatterns = {"/", "/login.do"})
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -33,7 +34,8 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String url = "login.jsp";
+		String url = "/member/login.jsp";
+		// 기존 세션을 리턴 혹은 새로운 세션 획득.
 		HttpSession session = request.getSession();
 		if (session.getAttribute("loginUser") != null) { // 이미 로그인 된 사용자이면
 			url = "index.jsp"; // 추후 수정 필요
@@ -47,7 +49,7 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String url = "login.jsp"; // 아리까리
+		String url = "/member/login.jsp"; // 아리까리
 		String userid = request.getParameter("userid");
 		String pwd = request.getParameter("pwd");
 		MemberDAO mDao = MemberDAO.getInstance();
