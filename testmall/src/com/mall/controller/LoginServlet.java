@@ -38,7 +38,7 @@ public class LoginServlet extends HttpServlet {
 		// 기존 세션을 리턴 혹은 새로운 세션 획득.
 		HttpSession session = request.getSession();
 		if (session.getAttribute("loginUser") != null) { // 이미 로그인 된 사용자이면
-			url = "index.jsp"; // 추후 수정 필요
+			url = "/index.jsp"; // 추후 수정 필요
 		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
@@ -60,7 +60,7 @@ public class LoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", mVo);
 			request.setAttribute("message", "로그인을 성공했습니다.");
-			url = "index.jsp"; // 추후 수정
+			url = "/index.jsp"; // 추후 수정
 		} else if (result == 0) {
 			request.setAttribute("message", "비밀번호가 맞지 않습니다.");
 		} else if (result == -1) {

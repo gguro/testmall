@@ -5,16 +5,16 @@
 
 
 <!-- 헤더 인클루드 -->
-<c:import url="header.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="/include/header.jsp" charEncoding="UTF-8"></c:import>
 
 <div class="wrapper">
 
 <!-- top 메뉴바 -->
-<c:import url="topMenu.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="/include/topMenu.jsp" charEncoding="UTF-8"></c:import>
 
 <div class="login_popup">
 	<h2>LOGIN</h2>
-      <form class="" action="login.do" method="post" onsubmit="return loginCheck()">
+      <form class="" name="frm" action="login.do" method="post"  >
 		<div class="row">
 			<input type="text" name="userid" value="" id="login_id" placeholder="아이디">
 		</div>
@@ -22,7 +22,7 @@
 			<input type="text" name="pwd" value="" id="login_pass" placeholder="비밀번호">
 		</div>
 		<div class="row">
-			<input type="submit" name="" value="로그인">
+			<input type="submit" name="" value="로그인" onclick="return loginCheck()">
 		</div>
 	</form>
 	<div class="find_row">
@@ -33,4 +33,4 @@
 	<div class="close">X</div>
 </div>
 </div>
-<c:import url="footer.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="/include/footer.jsp" charEncoding="UTF-8"></c:import>
