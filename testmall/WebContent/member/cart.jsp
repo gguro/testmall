@@ -2,14 +2,14 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:if test="${empty loginUser}">
-	<jsp:forward page='login.do' />
+	<jsp:forward page='/login.do' />
 </c:if>
 <!-- 헤더 인클루드 -->
-<c:import url="../header.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="/include/header.jsp" charEncoding="UTF-8"></c:import>
 <div class="wrapper">
 
 <!-- top 메뉴바 -->
-<c:import url="../topMenu.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="/include/topMenu.jsp" charEncoding="UTF-8"></c:import>
 
 <div class="container cart news">
 	<div class="con">
@@ -29,7 +29,7 @@
 				<tr>
 					<td class="num">1</td>
 					<td class="title"><a href=""> <span class="img_wrap">
-								<img src="images/cart/img1.jpg" alt="">
+								<img src="/testmall/images/cart/img1.jpg" alt="">
 						</span> <span class="t1"> [커버낫] S/S ARCHLOGO T-SHIRTS WHITE (옵션:
 								XL) </span>
 					</a></td>
@@ -42,7 +42,7 @@
 				<tr>
 					<td class="num">2</td>
 					<td class="title"><a href=""> <span class="img_wrap">
-								<img src="images/cart/img1.jpg" alt="">
+								<img src="/testmall/images/cart/img1.jpg" alt="">
 						</span> <span class="t1"> [커버낫] S/S ARCHLOGO T-SHIRTS WHITE (옵션:
 								XL) </span>
 					</a></td>
@@ -57,4 +57,4 @@
 	</div>
 </div>
 </div>
-<c:import url="../footer.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="/include/footer.jsp" charEncoding="UTF-8"></c:import>

@@ -3,15 +3,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <c:if test="${empty loginUser}">
-	<jsp:forward page='login.do' />
+	<jsp:forward page='/login.do' />
 </c:if>
 
 <!-- 헤더 인클루드 -->
-<c:import url="header.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="/include/header.jsp" charEncoding="UTF-8"></c:import>
 <div class="wrapper">
 
 <!-- top 메뉴바 -->
-<c:import url="topMenu.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="/include/topMenu.jsp" charEncoding="UTF-8"></c:import>
 
 <div class="container my_info">
 	<div class="con1">
@@ -63,7 +63,7 @@
 				<div class="btn_submitWrap">
 					<ul>
 						<li>
-							<a href="index.html">취소</a>
+							<a href="/testmall/index.html">취소</a>
 						</li>
 						<li>
 							<input type="submit" value="확인"/>
@@ -75,4 +75,4 @@
 	</div>
 </div>
 </div>
-<c:import url="footer.jsp" charEncoding="UTF-8"></c:import>
+<c:import url="/include/footer.jsp" charEncoding="UTF-8"></c:import>

@@ -40,7 +40,7 @@
 		</div>
 		<div class="row">
 			<input type="submit" name="" value="회원가입">
-			<button type="button" onclick="location.href='index.jsp' ">취소</button>
+			<button type="button" onclick="location.href=/testmall/index.jsp">취소</button>
 			
 			<!-- <a href="index.jsp">취소</a> -->
 			<!-- <input type="reset" name="" value="취소"> -->

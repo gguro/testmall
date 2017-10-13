@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="header">
 	<div class="logo">
-		<a href="index.jsp"> <img src="/testmall/images/logo.gif" alt="" />
+		<a href="/testmall/index.jsp"> <img src="/testmall/images/logo.gif" alt="" />
 		</a>
 	</div>
 	<div class="menu">
@@ -18,14 +18,14 @@
 		<ul>
  			<c:if test="${loginUser.name != null}">
 				<li><a>${loginUser.name}님.</a></li>
-				<li><a href="logout.do">logout</a></li>
+				<li><a href="/testmall/logout.do">logout</a></li>
 			</c:if>
 			<c:if test="${loginUser.name == null}">
-				<li><a href="login.do">LOGIN</a></li>
+				<li><a href="/testmall/login.do">LOGIN</a></li>
 			</c:if>
 			
-			<li><a href="/testmall/sub/cart.jsp">CART(0)</a></li>
-			<li><a href="/testmall/sub/my_info.jsp">MY</a></li>
+			<li><a href="/testmall/member/cart.jsp">CART(0)</a></li>
+			<li><a href="/testmall/member/my_info.jsp">MY</a></li>
 		</ul>
 	</div>
 </div>

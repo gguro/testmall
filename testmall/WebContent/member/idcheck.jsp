@@ -26,12 +26,13 @@
 		</c:if>
 		<c:if test="${result == -1}">
 			${userid}는 사용 가능한 아이디입니다.
-			<input type="button" values="사용" class="cancel"
-				onlick="idok('${userid}')">
+			<input type="button" value="사용" class="cancel"
+				onclick="idok('${userid}')">
 		</c:if>
 
 
 	</form>
 </div>
 
+</div>
 <c:import url="footer.jsp" charEncoding="UTF-8"></c:import>
